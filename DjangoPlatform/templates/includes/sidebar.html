@@ -1,0 +1,29 @@
+{% load static %}
+
+<div class="sidebar" data-color="purple" data-image="{% static '/assets/img/sidebar-1.jpg' %}">
+    <!--
+Tip 1: You can change the color of the sidebar using: data-color="purple | blue | green | orange | red"
+Tip 2: you can also add an image using data-image tag
+-->
+    <!--Menu Lateral-->
+    <div class="sidebar-wrapper">
+        <div class="logo">
+            <a class="simple-text logo-mini">
+
+            </a>
+            <a class="simple-text logo-normal">
+                Covid Brasil
+            </a>
+        </div>
+        <ul class="nav">
+            {% if request.user.is_staff %}
+            <li class="nav-item ">
+                <a class="nav-link" href="{% url 'dashboard' %}">
+                    <i class="nc-icon nc-chart-pie-35"></i>
+                    <p>Dashboard</p>
+                </a>
+            </li>
+            {% endif %}
+        </ul>
+    </div>
+</div>
