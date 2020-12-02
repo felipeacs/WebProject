@@ -13,6 +13,8 @@ python manage.py makemigrations
 python manage.py migration
 python manage.py runserver
 ````
+Quando o serviço estiver rodando a chamada a API pode ser feita da seguinte forma:
+- http://\<host\>/dashcovid/api/?country=brazil&end_date=20200612&state=PE&start_date=20200610
 
 Obs.: Para executar os testes unitarios implementados: 
 ````commandline
